@@ -1,0 +1,81 @@
+.list-unstyled li{
+    background: rgb(219, 238, 238);
+}
+
+.left {
+    min-height: 100vh;
+    border-right: 2px solid rgb(15, 15, 15);
+    background: #a39393;
+}
+
+
+.list-unstyled li a{
+    padding: 12px;
+    font-size: 16px;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.logo{
+    padding: 10px 0;
+    font-size:  30px ;
+    background: rgb(90, 89, 89);
+    color:rgb(45, 166, 223);
+    margin-bottom: 0;
+}
+
+
+
+.close{
+    float:right;
+    color: gray;
+    font-weight: bold;
+    font-size: 26;
+    cursor: pointer;
+}
+
+.conten-modal{
+    background-color: rgb(197, 235, 157);
+    margin: auto;
+   
+    padding: 20px;
+    color: 1px solid rgb(168, 16, 16);
+    width: 80%;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10px;;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0, 0, 0.3);
+}
+.list-unstyled li:hover{
+    background-color: rgb(133, 138, 134);
+}
+
+
+div.bg-light.px-4.py-3{
+
+    color: rgb(179, 82, 82);
+
+
+}
+.table{
+    color: rgb(89, 89, 128);
+}
+.bg-light{
+    
+   background-color: rgb(198, 248, 250)!important;
+   
+}

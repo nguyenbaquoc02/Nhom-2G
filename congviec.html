@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Công Việc</title>
+</head>
+
+<body class="bg-dark">
+
+    <div class="">
+        <div class="d-flex">
+            <div class="left" style="width: 20%;">
+                <p class="text-center logo">MENU</p>
+                <ul class="list-unstyled">
+                    <li><a href="trangchu.html">Trang chủ</a></li>
+                  
+                    <li class="active"><a href="nguoidung.html" >Người dùng </a></li>
+                    <li><a href="muavu.html">Mùa Vụ</a></li>
+                    <li><a href="congviec.html"style="background-color: aqua;">Công Việc</a></li>
+                    <li><a href="thietbi.html">Thiết Bị</a></li>
+                    <li><a href="dangnhap.html">Đăng Xuất</a></li>
+                    
+                    <br>
+                    <br>
+                  
+
+                    <center><script>var myVar=setInterval(function(){myTimer()},1000); function myTimer() {var d=new Date(); var t=d.toLocaleTimeString(); document.getElementById("h").innerHTML=t;}</script>
+                        <span id="h"></span>
+                        <script type="text/javascript">
+                        n=new Date();if(n.getTimezoneOffset()==0)t=n.getTime()+(7*60*60*1000);else t=n.getTime();n.setTime(t);var dn=new Array("Chủ nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7");d=n.getDay();m=n.getMonth()+1;y=n.getFullYear()
+                        document.write(dn[d]+", "+(n.getDate()<10?"0":"")+n.getDate()+"/"+(m<10?"0":"")+m+"/"+y)
+                        </script></center>
+                        <style>
+                        #h {font-weight:400;
+                           
+                            display: block;
+                            font-size: 30px;
+                            margin: 0 0 5px;
+                            letter-spacing: 5px;
+                        }
+                        </style>
+
+                </ul>
+            </div>
+            <div style="width: 80%" class="bg-light px-4 py-3">
+                <h2 class="mb-3">Quản lý Công Việc</h2>
+                <p class="lead">&bull; Danh sách Công Việc</p>
+                <button class="btn btn-info mb-4" id="addnguoidung">Thêm Công Việc</button>
+
+                <table id="tblnguoidung" class="table">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên </th>
+                            <th>Công Việc(mùa vụ)</th>
+                            <th>Ngày Bắt đầu</th>
+                           
+
+                          
+                            <th>Ngày Kết thúc</th>
+                            <th>Thời Gian Dự Kiến</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td id="image" style="text-align: center;" colspan="5"><img style="height: 100px"
+                                src="img/spinner.gif" alt="">
+                        </td>
+
+
+                    </tbody>
+                </table>
+                <div id="addModal" class="modal">
+                 
+                    <div class="conten-modal">
+                        <span class="close">&times;</span>
+                        <div>
+
+                            <div style="width: 80%;" class="bg-light px-4 py-3">
+                                <form>
+                                    <input style="display: none;" type="text" id="editId">
+                                    <div class="form-group">
+                                        <label>Tên </label>
+                                        <input id="editten" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Công Việc</label>
+                                        <input id="editcongviec" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ngày Bắt đầu</label>
+                                        <input id="editngaybd" type="date" class="form-control">
+                                    </div>
+
+                                   
+                                    <div class="form-group">
+                                        <label>Ngày Kết Thúc</label>
+                                        <input id="editngaykt" type="date" class="form-control">
+                                      
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Thời Gian Dự Kiến</label>
+                                        <input id="edittgdk" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Trạng Thái</label>
+                                        <select class="form-control" id="edittrangthai">
+                                            <option value="Cần Làm">Cần Làm</option>
+                                            <option value="Đang Làm">Đang Làm</option>
+                                            <option value="Hoàn Thành">Hoàn Thành</option>
+                                        </select>
+                                    </div>
+                                   
+                                    <button type="button" class="btn btn-primary mt-3" id="bntSumit">Xác Nhận</button>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+       
+        <script src="congviec.js"></script>
+       
+</body>
+
+</html>
